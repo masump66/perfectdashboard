@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="grid-container">
+        <aside class="sidebar">
+           <img src="dashboardlogo.jpg" alt=""> <h1><i class="fa-solid fa-store"></i> INFOSYS STORE</h1>
+          <li> <a href="#home"><i class="fa-solid fa-house"></i> HOME</a></li>
+          <li> <a href="#Dashboard"><i class="fa-solid fa-table-columns"></i> DASHBOARD</a></li>
+          <li> <a href="#product"><i class="fa-solid fa-rectangle-ad"></i> PRODUCTS</a></li>
+          <li><a href="categories"><i class="fa-solid fa-arrow-up-right-dots"></i> CATEGORIES</a></li>
+          <li> <a href="#reporting"><i class="fa-solid fa-bug"></i> REPORTING</a></li>
+          <li><a href="#customer"> <i class="fa-solid fa-user"></i> CUSTOMERS</a></li>
+          <li><a href="#help"><i class="fa-solid fa-circle-question"></i> HELP</a></li>
+          <li><a href="#setting"> <i class="fa-solid fa-gear"></i>SETTINGS</a></li>
+        </aside>
+        <div>
+            <header class="header">
+               <strong> Search:</strong> <input type="text"> <i class="fa-solid fa-magnifying-glass"></i>
+               <i class="fa-solid fa-bell"></i>
+            </header>
+            <main class="maincontainer">
+                <div class="main">PRODUCT <p>225</p></div>
+                <div class="main" >CATEGORIES<p>342</p></div>
+                <div class="main">CUSTOMERS<P>555</P></div>
+                <div class="main">ALERT
+                    <P>90</P>
+                </div>
+                <div class="main1">Top 5 Product
+                    <div class="chart">
+                        <canvas id="myChart"></canvas>
+                    </div>
+                      
+                      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                      
+                      <script>
+                        const ctx = document.getElementById('myChart');
+                      
+                        new Chart(ctx, {
+                          type: 'bar',
+                          data: {
+                            labels: ['Cloth', 'Mobile', 'Toy', 'Grosary', 'fruit'],
+                            datasets: [{
+                              data: [25, 19, 13, 8, 5],
+                              borderWidth: 1
+                            }]
+                          },
+                          options: {
+                            scales: {
+                              y: {
+                                beginAtZero: true
+                              }
+                            }
+                          }
+                        });
+                      </script>
+                </div>
+                <div class="main2">Purchase And Sales Order
+                    <p>tracking information</p>
+                    <select>
+                        <option value="days">days</option>
+                        <option value="weekly">weekly</option>
+                        <option value="monthly">monthly</option>
+                        <option value="yearly">yearly</option>
+                    </select><br>
+                </div> 
+            </main>
+        </div>
+    </div>
+</body>
+</html>

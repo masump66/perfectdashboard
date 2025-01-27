@@ -1,0 +1,128 @@
+*{
+	list-style: none;
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Courier New', Courier, monospace;
+}
+html{
+	font-size: 62.5%;
+}
+body{
+	background: #f5f6fa;
+}
+.grid-container{
+	display: grid;
+	grid-template-columns: 27.0rem 120.0rem;
+	list-style: none;
+}
+.sidebar{
+	grid-area: "sidebar";
+	background-color: rgba(32, 156, 218, 0.893);
+	height: 100vh;
+	padding: 2.0rem;
+}
+.sidebar:hover{
+	background-color: grey;
+	color: wheat;
+	transform: scale(1.04);
+}
+.sidebar img{
+	border-radius: 100%;
+	height: 6.0rem;
+}
+h1{
+	font-size: 2.0rem;
+	padding-bottom: 5.0rem;
+}
+.sidebar li{
+	font-size: 2.0rem;
+	width: 4.0rem;
+	padding: .8rem;
+	margin: .3rem;
+}
+.sidebar li:hover{
+	background-color: white;
+	border-radius: 1.0rem;
+	width: 22.0rem;
+	transform: scale(1.09);
+	transition: 1s;
+}
+.header{
+	grid-area: "header";
+	width: 121.0rem;
+	background-color: silver;
+	height: 6.0rem;
+	padding: 2.0rem;
+}
+.header input{
+	width: 80.0rem;
+	border: .2rem solid black;
+	border-radius: .8rem;
+}
+.header input:hover{
+	background-color: skyblue;
+	transform: scale(1.03);
+	transition: 1s;
+}
+.maincontainer{
+	display: grid;
+	grid-template-columns: 28.0rem 28.0rem 28.0rem 28.0rem;
+	grid-template-rows: 30.0rem 30.0rem;
+	margin: 2.0rem;
+	padding: 1.0rem;
+	font-weight: bold;
+	text-align: center;	
+}
+.main{
+	color: blue;
+	font-size: 2.0rem;
+}
+.maincontainer p{
+	padding-top: 5.0rem;
+	text-align: center;
+	color: purple;
+}
+.maincontainer div{
+	background-color: rgb(248, 240, 255);
+	border: .2rem solid skyblue;
+	margin: 1.0rem;
+	box-shadow: 0 .5rem 1.0rem gray;
+	border-radius: 1.5rem;
+	padding-top: 3.0rem;
+}
+.maincontainer div:hover{
+	background-color: bisque;
+	transform: scale(1.1);
+	transition-duration: 3s;
+	color: darkblue;
+}
+.main1{
+	color: blue;
+	font-size: 2.0rem;
+	grid-column-start: 1;
+    grid-column-end: 3;
+	height: 32.0rem;
+}
+.main2{
+	color: blue;
+	font-size: 2.0rem;
+	width: 50.0rem;
+	height: 32.0rem;
+}
+.chart{
+	height: 20.0rem;
+	width: 40.0rem;
+	margin-left: 2.0rem;
+}
+@media(max-width:998px){
+	html{
+		font-size: 55%;
+	}
+}
+@media(max-width:768px){
+	html{
+		font-size: 40%;
+	}
+}
